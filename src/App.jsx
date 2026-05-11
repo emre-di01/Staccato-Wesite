@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ForWhom from './components/ForWhom'
 import Features from './components/Features'
+import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -20,6 +21,7 @@ export default function App() {
   function handleSetLang(l) {
     setLang(l)
     localStorage.setItem('staccato_landing_lang', l)
+    document.documentElement.lang = l
   }
 
   const t = useT(lang)
@@ -30,6 +32,7 @@ export default function App() {
       <Hero t={t} />
       <ForWhom t={t} />
       <Features t={t} />
+      <Testimonials t={t} />
       <Pricing t={t} />
       <Contact t={t} />
       <Footer t={t} />

@@ -1,16 +1,62 @@
-# React + Vite
+# Staccato Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing-Website für die Staccato Musikschul-Management-Plattform.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite
+- Tailwind CSS v4
+- Keine externen Animationsbibliotheken — CSS-Animationen + IntersectionObserver
 
-## React Compiler
+## URLs
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| | URL |
+|--|--|
+| Live | https://staccato-music.de |
+| App | https://app.staccato-music.de |
 
-## Expanding the ESLint configuration
+## Befehle
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install       # Abhängigkeiten installieren
+npm run dev       # Dev-Server auf Port 5174 (alle Interfaces)
+npm run build     # Produktions-Build → dist/
+npm run preview   # Build lokal vorschauen
+```
+
+## Struktur
+
+```
+src/
+  components/
+    Navbar.jsx       # Sticky Nav mit Sprachumschalter + Login-Button
+    Hero.jsx         # Hero-Section mit Statistiken
+    ForWhom.jsx      # Zielgruppen-Karten
+    Features.jsx     # Feature-Grid (8 Karten)
+    Testimonials.jsx # Referenzen mit Zitaten
+    Pricing.jsx      # 3 Preismodelle
+    Contact.jsx      # Kontaktformular (mailto)
+    Footer.jsx       # Links + Copyright
+  hooks/
+    useInView.js     # IntersectionObserver-Hook für Scroll-Animationen
+  i18n.js            # Übersetzungen DE / EN / TR
+  App.jsx
+  index.css          # Tailwind + CSS-Animationen
+```
+
+## SEO
+
+- `public/robots.txt` und `public/sitemap.xml` für `staccato-music.de`
+- Open Graph Tags, Twitter Card und Schema.org `SoftwareApplication` in `index.html`
+- `<html lang>` wird dynamisch beim Sprachwechsel gesetzt
+
+## Deploy
+
+Build-Output (`dist/`) wird von Nginx direkt ausgeliefert:
+- Nginx-Config: `/etc/nginx/sites-available/staccato-music`
+- SSL: `/etc/letsencrypt/live/staccato-music.de/`
+
+```bash
+npm run build
+# dist/ wird sofort live ausgeliefert — kein Neustart nötig
+```

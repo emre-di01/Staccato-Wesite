@@ -23,6 +23,7 @@ export const translations = {
       ],
     },
     forWhom: {
+      badge: 'Für wen',
       title: 'Für jeden in der Musikschule',
       subtitle:
         'Staccato bringt alle Beteiligten auf eine Plattform – mit einer eigenen Ansicht für jede Rolle.',
@@ -147,6 +148,23 @@ export const translations = {
         },
       ],
     },
+    testimonials: {
+      badge: 'Referenzen',
+      title: 'Was unsere Nutzer sagen',
+      subtitle: 'Musikschulen und Vereine, die mit Staccato ihren Alltag digitalisiert haben.',
+      trustedBy: 'Bereits im Einsatz bei',
+      items: [
+        {
+          quote: 'Staccato hat unsere gesamte Verwaltung vereinfacht. Stundenplan, Anwesenheit und Repertoire sind jetzt an einem Ort – das spart uns wöchentlich mehrere Stunden.',
+          name: 'Yusuf Demir',
+          role: 'Vorstandsvorsitzender',
+          org: 'Türkischer Musikverein Darmstadt e.V.',
+        },
+      ],
+      logos: [
+        'Türkischer Musikverein Darmstadt e.V.',
+      ],
+    },
     contact: {
       title: 'Interesse geweckt?',
       subtitle: 'Schreib uns – wir melden uns innerhalb von 24 Stunden.',
@@ -191,6 +209,7 @@ export const translations = {
       ],
     },
     forWhom: {
+      badge: 'For whom',
       title: 'For everyone at the music school',
       subtitle:
         'Staccato brings all participants to one platform – with a dedicated view for each role.',
@@ -315,6 +334,23 @@ export const translations = {
         },
       ],
     },
+    testimonials: {
+      badge: 'References',
+      title: 'What our users say',
+      subtitle: 'Music schools and associations that have digitised their daily work with Staccato.',
+      trustedBy: 'Already in use at',
+      items: [
+        {
+          quote: 'Staccato has simplified our entire administration. Schedule, attendance and repertoire are now in one place – saving us several hours every week.',
+          name: 'Yusuf Demir',
+          role: 'Chairman',
+          org: 'Türkischer Musikverein Darmstadt e.V.',
+        },
+      ],
+      logos: [
+        'Türkischer Musikverein Darmstadt e.V.',
+      ],
+    },
     contact: {
       title: 'Interested?',
       subtitle: 'Write to us – we will get back to you within 24 hours.',
@@ -359,6 +395,7 @@ export const translations = {
       ],
     },
     forWhom: {
+      badge: 'Kimler için',
       title: 'Müzik okulundaki herkes için',
       subtitle:
         'Staccato tüm katılımcıları tek platformda buluşturur – her rol için ayrı bir görünüm.',
@@ -481,6 +518,23 @@ export const translations = {
           cta: 'İletişime geç',
           highlight: false,
         },
+      ],
+    },
+    testimonials: {
+      badge: 'Referanslar',
+      title: 'Kullanıcılarımız ne diyor',
+      subtitle: 'Staccato ile günlük işlerini dijitalleştiren müzik okulları ve dernekler.',
+      trustedBy: 'Zaten kullananlar',
+      items: [
+        {
+          quote: 'Staccato tüm yönetimimizi kolaylaştırdı. Ders programı, devamsızlık ve repertuvar artık tek bir yerde – bu bize her hafta birkaç saat kazandırıyor.',
+          name: 'Yusuf Demir',
+          role: 'Yönetim Kurulu Başkanı',
+          org: 'Türkischer Musikverein Darmstadt e.V.',
+        },
+      ],
+      logos: [
+        'Türkischer Musikverein Darmstadt e.V.',
       ],
     },
     contact: {

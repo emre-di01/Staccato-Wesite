@@ -8,3 +8,45 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Scroll-triggered fade-in animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 { transition-delay: 0.06s; }
+.fade-up-delay-2 { transition-delay: 0.12s; }
+.fade-up-delay-3 { transition-delay: 0.18s; }
+.fade-up-delay-4 { transition-delay: 0.24s; }
+.fade-up-delay-5 { transition-delay: 0.30s; }
+.fade-up-delay-6 { transition-delay: 0.36s; }
+.fade-up-delay-7 { transition-delay: 0.42s; }
+.fade-up-delay-8 { transition-delay: 0.48s; }
+
+/* Hero animations (trigger on mount, not scroll) */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-1 { animation: fadeSlideIn 0.6s ease 0.0s both; }
+.hero-2 { animation: fadeSlideIn 0.6s ease 0.1s both; }
+.hero-3 { animation: fadeSlideIn 0.6s ease 0.2s both; }
+.hero-4 { animation: fadeSlideIn 0.6s ease 0.3s both; }
+.hero-5 { animation: fadeSlideIn 0.6s ease 0.4s both; }
+
+/* Navbar slide-in */
+@keyframes navIn {
+  from { opacity: 0; transform: translateY(-80px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-in { animation: navIn 0.5s ease both; }
+
+/* Pulse dot */
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.animate-pulse { animation: pulse 1.5s infinite; }

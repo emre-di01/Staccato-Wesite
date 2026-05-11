@@ -40,12 +40,12 @@ export default function Footer({ t }) {
               <div className="text-white font-medium text-sm mb-3">{t.footer.legal}</div>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://401dev.de/impressum" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
+                  <a href="https://app.staccato-music.de/impressum" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
                     {t.footer.impressum}
                   </a>
                 </li>
                 <li>
-                  <a href="https://401dev.de/datenschutz" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
+                  <a href="https://app.staccato-music.de/datenschutz" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
                     {t.footer.datenschutz}
                   </a>
                 </li>
