@@ -1,17 +1,10 @@
 export default function Hero({ t }) {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-950 pt-16">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[50%] -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-violet-600/20 blur-[120px]" />
-        <div className="absolute top-[30%] left-[-10%] w-[500px] h-[500px] rounded-full bg-purple-900/30 blur-[100px]" />
-        <div className="absolute top-[20%] right-[-5%] w-[400px] h-[400px] rounded-full bg-cyan-900/20 blur-[100px]" />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute top-[-10%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-violet-600/15 blur-[80px]" />
+        <div className="absolute top-[40%] left-[-5%] w-[300px] h-[300px] rounded-full bg-purple-900/20 blur-[60px]" />
+        <div className="absolute top-[25%] right-[-5%] w-[280px] h-[280px] rounded-full bg-cyan-900/15 blur-[60px]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
@@ -33,7 +26,7 @@ export default function Hero({ t }) {
         </p>
 
         <div className="hero-4 flex flex-col sm:flex-row gap-3 justify-center mb-16">
-          <a href="#contact" className="px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white font-semibold rounded-xl transition-all shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5 active:translate-y-0">
+          <a href="#demo" className="px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white font-semibold rounded-xl transition-all shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5 active:translate-y-0">
             {t.hero.cta}
           </a>
           <a href="#features" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0">

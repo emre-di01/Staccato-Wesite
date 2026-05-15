@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0533"/>
+      <stop offset="100%" stop-color="#2d0a5e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#863bff"/>
+      <stop offset="100%" stop-color="#47bfff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="100" r="200" fill="#863bff" opacity="0.08"/>
+  <circle cx="150" cy="530" r="150" fill="#47bfff" opacity="0.06"/>
+  <circle cx="950" cy="520" r="120" fill="#863bff" opacity="0.06"/>
+
+  <!-- Accent bar -->
+  <rect x="80" y="290" width="6" height="80" rx="3" fill="url(#accent)"/>
+
+  <!-- Logo icon (Staccato lightning bolt, scaled up) -->
+  <g transform="translate(80, 160) scale(2.8)">
+    <path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z"/>
+  </g>
+
+  <!-- Staccato wordmark -->
+  <text x="240" y="235" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="800" fill="white" letter-spacing="-2">Staccato</text>
+
+  <!-- Tagline -->
+  <text x="245" y="300" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="400" fill="#c4a8ff">Musikschul-Management Software</text>
+
+  <!-- Feature pills -->
+  <rect x="245" y="340" width="170" height="40" rx="20" fill="#863bff" opacity="0.3"/>
+  <text x="330" y="366" font-family="Inter, Arial, sans-serif" font-size="18" fill="#c4a8ff" text-anchor="middle">Kursverwaltung</text>
+
+  <rect x="430" y="340" width="140" height="40" rx="20" fill="#863bff" opacity="0.3"/>
+  <text x="500" y="366" font-family="Inter, Arial, sans-serif" font-size="18" fill="#c4a8ff" text-anchor="middle">Stundenplan</text>
+
+  <rect x="585" y="340" width="120" height="40" rx="20" fill="#863bff" opacity="0.3"/>
+  <text x="645" y="366" font-family="Inter, Arial, sans-serif" font-size="18" fill="#c4a8ff" text-anchor="middle">Repertoire</text>
+
+  <rect x="720" y="340" width="165" height="40" rx="20" fill="#863bff" opacity="0.3"/>
+  <text x="803" y="366" font-family="Inter, Arial, sans-serif" font-size="18" fill="#c4a8ff" text-anchor="middle">Live-Unterricht</text>
+
+  <!-- Domain -->
+  <text x="245" y="430" font-family="Inter, Arial, sans-serif" font-size="26" fill="#7c5cb8" font-weight="500">staccato-music.de</text>
+</svg>

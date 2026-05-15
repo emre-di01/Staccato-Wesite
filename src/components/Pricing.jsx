@@ -1,9 +1,9 @@
 import { Check } from 'lucide-react'
-import { useInView } from '../hooks/useInView'
+import { useInView, useInViewChildren } from '../hooks/useInView'
 
 export default function Pricing({ t }) {
   const headerRef = useInView()
-  const cardRefs = t.pricing.plans.map(() => useInView())
+  const gridRef = useInViewChildren()
 
   return (
     <section id="pricing" className="py-24 sm:py-32 bg-slate-950">
@@ -18,11 +18,10 @@ export default function Pricing({ t }) {
           <p className="text-slate-400 text-lg">{t.pricing.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           {t.pricing.plans.map((plan, i) => (
             <div
               key={plan.name}
-              ref={cardRefs[i]}
               className={`fade-up fade-up-delay-${i + 1} relative rounded-2xl p-6 flex flex-col transition-all ${
                 plan.highlight
                   ? 'bg-gradient-to-b from-violet-600/20 to-purple-900/10 border-2 border-violet-500/50 shadow-2xl shadow-violet-500/20 scale-105'

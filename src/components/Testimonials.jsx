@@ -1,4 +1,4 @@
-import { useInView } from '../hooks/useInView'
+import { useInView, useInViewChildren } from '../hooks/useInView'
 
 function Stars() {
   return (
@@ -14,7 +14,7 @@ function Stars() {
 
 export default function Testimonials({ t }) {
   const headerRef = useInView()
-  const cardRefs = t.testimonials.items.map(() => useInView())
+  const gridRef = useInViewChildren()
   const logoRef = useInView()
 
   return (
@@ -30,11 +30,10 @@ export default function Testimonials({ t }) {
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">{t.testimonials.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.testimonials.items.map((item, i) => (
             <div
               key={item.name}
-              ref={cardRefs[i]}
               className={`fade-up fade-up-delay-${i + 1} relative flex flex-col p-6 rounded-2xl bg-slate-900 border border-white/5 hover:border-white/10 transition-all`}
             >
               <div className="absolute top-5 right-6 text-5xl leading-none text-violet-500/20 font-serif select-none">"</div>

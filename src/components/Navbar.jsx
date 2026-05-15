@@ -8,8 +8,17 @@ export default function Navbar({ lang, setLang, t }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    let ticking = false
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -59,7 +68,7 @@ export default function Navbar({ lang, setLang, t }) {
           <a href="https://app.staccato-music.de" className="px-4 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg transition-colors">
             {t.nav.login}
           </a>
-          <a href="#contact" className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium rounded-lg transition-colors shadow-lg shadow-violet-500/20">
+          <a href="#demo" className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium rounded-lg transition-colors shadow-lg shadow-violet-500/20">
             {t.nav.cta}
           </a>
         </div>
@@ -94,7 +103,7 @@ export default function Navbar({ lang, setLang, t }) {
               <a href="https://app.staccato-music.de" className="px-3 py-2 text-slate-300 text-sm font-medium rounded-lg border border-white/10">
                 {t.nav.login}
               </a>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-2 bg-violet-600 text-white text-sm font-medium rounded-lg">
+              <a href="#demo" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-2 bg-violet-600 text-white text-sm font-medium rounded-lg">
                 {t.nav.cta}
               </a>
             </div>

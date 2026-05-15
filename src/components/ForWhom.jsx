@@ -1,8 +1,8 @@
-import { useInView } from '../hooks/useInView'
+import { useInView, useInViewChildren } from '../hooks/useInView'
 
 export default function ForWhom({ t }) {
   const headerRef = useInView()
-  const cardRefs = t.forWhom.cards.map(() => useInView())
+  const gridRef = useInViewChildren()
 
   return (
     <section id="for-whom" className="py-24 sm:py-32 bg-slate-950">
@@ -17,11 +17,10 @@ export default function ForWhom({ t }) {
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">{t.forWhom.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {t.forWhom.cards.map((card, i) => (
             <div
               key={card.title}
-              ref={cardRefs[i]}
               className={`fade-up fade-up-delay-${i + 1} relative group p-6 rounded-2xl bg-white/3 border border-white/8 hover:border-violet-500/30 hover:-translate-y-1 transition-all cursor-default overflow-hidden`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-violet-600/0 to-violet-600/0 group-hover:from-violet-600/5 group-hover:to-purple-600/5 transition-all rounded-2xl" />
