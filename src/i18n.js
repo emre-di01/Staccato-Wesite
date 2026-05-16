@@ -67,8 +67,8 @@ export const translations = {
         },
         {
           icon: '🎼',
-          title: 'Repertoire',
-          desc: 'Notenblätter, Audiodateien, ChordPro-Akkorde und Liedtexte – mit Live-Transposition und PDF-Export.',
+          title: 'Repertoire & KI-Tools',
+          desc: 'MusicXML-Notation, Spotify-Player, KI-Akkorderkennung, ChordPro und Liedtexte – mit MusicBrainz-Metadatensuche und PDF-Export.',
         },
         {
           icon: '📡',
@@ -253,8 +253,8 @@ export const translations = {
         },
         {
           icon: '🎼',
-          title: 'Repertoire',
-          desc: 'Sheet music, audio files, ChordPro chords and lyrics – with live transposition and PDF export.',
+          title: 'Repertoire & AI Tools',
+          desc: 'MusicXML notation, Spotify player, AI chord recognition, ChordPro and lyrics – with MusicBrainz metadata search and PDF export.',
         },
         {
           icon: '📡',
@@ -439,8 +439,8 @@ export const translations = {
         },
         {
           icon: '🎼',
-          title: 'Repertuvar',
-          desc: 'Nota kağıtları, ses dosyaları, ChordPro akorları ve şarkı sözleri – canlı transpoze ve PDF dışa aktarma.',
+          title: 'Repertuvar & Yapay Zeka',
+          desc: 'MusicXML notasyonu, Spotify oynatıcı, yapay zeka akor tanıma, ChordPro ve şarkı sözleri – MusicBrainz meta veri arama ve PDF dışa aktarma.',
         },
         {
           icon: '📡',
