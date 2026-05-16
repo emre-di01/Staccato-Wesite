@@ -13,7 +13,7 @@ export default function Hero({ t }) {
           {t.hero.badge}
         </div>
 
-        <h1 className="hero-2 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-4">
+        <h1 className="hero-2 text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-4">
           {t.hero.title1}
           <br />
           <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
